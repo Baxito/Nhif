@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_people_black_24dp"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_hospitals"
+            android:icon="@drawable/ic_local_hospital_black_24dp"
+            android:title="Near by Hospitals" />
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/notification"
+            android:title="Notifications" />
+        <item
+            android:id="@+id/nav_payments"
+            android:title="Payments"
+            android:icon="@drawable/payment"/>
+        <item
+            android:id="@+id/nav_code"
+            android:title="My QR Code"
+            android:icon="@drawable/iconsqrcode"/>
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_description_black_24dp"
+            android:title="About us" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

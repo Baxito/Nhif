@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TibaKwanza.iml" filepath="$PROJECT_DIR$/TibaKwanza.iml" />
+      <module fileurl="file://C:\Users\HOT_admin\AndroidStudioProjects\TibaKwanza\TibaKwanza.iml" filepath="C:\Users\HOT_admin\AndroidStudioProjects\TibaKwanza\TibaKwanza.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\HOT_admin\AndroidStudioProjects\TibaKwanza\app\app.iml" filepath="C:\Users\HOT_admin\AndroidStudioProjects\TibaKwanza\app\app.iml" />
+    </modules>
+  </component>
+</project>
