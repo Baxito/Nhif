@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorAccent"
-        android:orientation="vertical"
-        android:scrollbarAlwaysDrawVerticalTrack="true">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    tools:context="com.example.miriam.tibakwanza.LoginActivity"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -17,7 +19,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginTop="22dp"
             android:gravity="center_horizontal"
-            android:text="Account Login"
+            android:text="@string/account_login"
             android:textColor="#fff"
             android:textSize="26sp"
             android:textStyle="bold" />
@@ -32,7 +34,8 @@
             android:background="#fff"
             android:elevation="4dp"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="20dp"
+            >
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -47,9 +50,9 @@
                     <EditText
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-
+                        android:id="@+id/reg_no"
                         android:singleLine="true"
-                        android:hint="User Name"
+                        android:hint="@string/reg_no"
                         android:inputType="textEmailAddress" />
                 </android.support.design.widget.TextInputLayout>
 
@@ -62,17 +65,19 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:singleLine="true"
-
-                        android:hint="Password"
-                        android:inputType="numberPassword" />
+                        android:id="@+id/password"
+                        android:hint="@string/password"
+                        android:inputType="textPassword" />
                 </android.support.design.widget.TextInputLayout>
 
                 <TextView
+                    android:id="@+id/resetPass"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right"
+                    android:layout_gravity="end"
+                    android:clickable="true"
                     android:paddingTop="5dp"
-                    android:text="Forgot Password?" />
+                    android:text="@string/forgot_password" />
 
 
                 <Button
@@ -81,17 +86,19 @@
                     android:layout_margin="22dp"
                     android:background="@color/colorPrimary"
                     android:id="@+id/login"
-                    android:text="Sign in"
+                    android:text="@string/sign_in"
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="18sp" />
+
                 <TextView
+                    android:id="@+id/sign_up"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:id="@+id/sign_up"
+                    android:clickable="true"
                     android:paddingTop="0dp"
-                    android:text="Don't have an account? Sign up now" />
+                    android:text="@string/don_t_have_an_account_sign_up_now" />
             </LinearLayout>
         </RelativeLayout>
 
@@ -106,5 +113,14 @@
             android:elevation="4dp"
             />
     </RelativeLayout>
-    </android.support.constraint.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone" />
+
+</android.support.constraint.ConstraintLayout>
 

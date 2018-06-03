@@ -21,6 +21,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,8 +29,6 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +46,6 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        /*Timer timer = new Timer();
-        timer.scheduleAtFixedRate(new MyTimerTask (),2000,4000);*/
-
 
     }
 
@@ -90,6 +85,12 @@ public class HomeActivity extends AppCompatActivity
             sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBodyText);
             startActivity(Intent.createChooser(sharingIntent, "Shearing Option"));
             return true;
+        }
+        else if(id==R.id.signOut){
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            startActivity(new Intent(this,LoginActivity.class));
+            return  true;
         }
 
         return super.onOptionsItemSelected(item);

@@ -30,7 +30,9 @@
             android:background="#fff"
             android:elevation="4dp"
             android:orientation="vertical"
-            android:padding="1dp">
+            android:padding="1dp"
+            tools:ignore="UnknownIdInLayout"
+            tools:targetApi="lollipop">
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -46,9 +48,11 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:drawableTint="@color/colorAccent"
-                        android:hint="Full Name"
+                        android:hint="@string/full_name"
+                        android:id="@+id/user_name"
                         android:inputType="textEmailAddress"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        tools:targetApi="m" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -59,9 +63,11 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:drawableTint="@color/colorAccent"
-                        android:hint="Password"
+                        android:hint="@string/password"
+                        android:id="@+id/pass"
                         android:inputType="textEmailAddress"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        tools:targetApi="m" />
                 </android.support.design.widget.TextInputLayout>
 
 
@@ -73,9 +79,11 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:drawableTint="@color/colorAccent"
-                        android:hint="Reg. Number"
+                        android:hint="@string/reg_number"
+                        android:id="@+id/regNo"
                         android:inputType="textEmailAddress"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        tools:targetApi="m" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -86,9 +94,11 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:drawableTint="@color/colorAccent"
-                        android:hint="Gender"
+                        android:hint="@string/gender"
+                        android:id="@+id/gender"
                         android:inputType="textEmailAddress"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        tools:targetApi="m" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -99,9 +109,11 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:drawableTint="@color/colorAccent"
-                        android:hint="DOB"
+                        android:hint="@string/dob"
+                        android:id="@+id/dob"
                         android:inputType="textEmailAddress"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        tools:targetApi="m" />
                 </android.support.design.widget.TextInputLayout>
 
 
@@ -109,11 +121,10 @@
                     android:id="@+id/spinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
                     android:autofillHints="Courses"
                     android:drawableTint="@color/colorAccent"
 
-                    />
+                    tools:targetApi="o" />
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
@@ -122,7 +133,8 @@
                     <EditText
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Nationality"
+                        android:hint="@string/nationality"
+                        android:id="@+id/nation"
                         android:inputType="textEmailAddress"
                         android:singleLine="true" />
                 </android.support.design.widget.TextInputLayout>
@@ -135,9 +147,11 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:drawableTint="@color/colorAccent"
-                        android:hint="Marital Status"
+                        android:hint="@string/marital_status"
+                        android:id="@+id/marital"
                         android:inputType="textEmailAddress"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        tools:targetApi="m" />
                 </android.support.design.widget.TextInputLayout>
 
                 <Button
@@ -146,10 +160,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:background="@color/colorPrimary"
-                    android:text="SUBMIT"
+                    android:text="@string/submit"
                     android:textAllCaps="false"
                     android:textColor="#fff"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
             </LinearLayout>
         </RelativeLayout>
@@ -161,12 +175,20 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="14dp"
-            android:text="APPLICATION FORM"
+            android:text="@string/application_form"
             android:textColor="#ffff"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
     </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone" />
 
 
 </android.support.constraint.ConstraintLayout>

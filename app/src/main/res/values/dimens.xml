@@ -92,4 +92,5 @@
     <dimen name="alert_width">290dp</dimen>
     <dimen name="common_circle_width">3dp</dimen>
     <dimen name="progress_circle_radius">34dp</dimen>
+    <dimen name="logo_w_h">100dp</dimen>
 </resources>
